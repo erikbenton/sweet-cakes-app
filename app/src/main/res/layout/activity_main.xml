@@ -7,22 +7,29 @@
     tools:context="com.example.android.sweetcakes.MainActivity">
 
     <ImageView
+        android:id="@+id/cake"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitStart"
+        android:padding="0dp"
+        android:adjustViewBounds="true"
         android:src="@drawable/sweet_cake"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#fbd2ce"
-        android:paddingBottom="16dp"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp"
         android:paddingTop="8dp" >
+
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="right"
             android:layout_gravity="center_vertical"
+            android:fontFamily="cursive"
             android:textSize="36dp"
             android:textColor="@android:color/black"
             android:text="Sweet" />
@@ -38,12 +45,86 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_gravity="center_vertical"
+            android:fontFamily="cursive"
             android:textSize="36dp"
             android:textColor="@android:color/black"
             android:text="Cakes" />
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:orientation="vertical"
+        android:background="#fbd2ce"
+        android:layout_below="@id/cake" >
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24dp"
+            android:textAlignment="center"
+            android:fontFamily="cursive"
+            android:textColor="@android:color/black"
+            android:text="Sweet Cakes Bakery and Café is a local from scratch bakery in Peace Dale, Rhode Island." />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="cursive"
+                    android:textSize="24dp"
+                    android:textColor="@android:color/black"
+                    android:text="Location:"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="cursive"
+                    android:textSize="24dp"
+                    android:paddingLeft="24dp"
+                    android:textColor="@android:color/black"
+                    android:text="1227 Kingstown Road\nPeace Dale, RI 02879"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="cursive"
+                    android:textSize="24dp"
+                    android:textColor="@android:color/black"
+                    android:text="Hours:"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="cursive"
+                    android:textSize="18dp"
+                    android:paddingLeft="8dp"
+                    android:textColor="@android:color/black"
+                    android:text="Mon-Sat 7am-5pm\nSun 8am-2pm"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
 </RelativeLayout>
